@@ -1,0 +1,61 @@
+{
+    "name": "php-pdf/laravel-pdf",
+    "description": "Laravel wrapper package for php-pdf/pdf-lib, providing seamless PDF operations in Laravel applications",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "laravel",
+        "pdf",
+        "pdf-lib",
+        "merge",
+        "split",
+        "sign",
+        "encrypt",
+        "form",
+        "html-to-pdf",
+        "docx-to-pdf"
+    ],
+    "authors": [
+        {
+            "name": "Galih Lasahido",
+            "email": "galih.lasahido@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "php-pdf/pdf-lib": "^1.0",
+        "illuminate/support": "^9.0|^10.0|^11.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^7.0|^8.0|^9.0",
+        "phpunit/phpunit": "^9.0|^10.0|^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "PdfLib\\Laravel\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PdfLib\\Laravel\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "PdfLib\\Laravel\\PdfServiceProvider"
+            ],
+            "aliases": {
+                "PDF": "PdfLib\\Laravel\\Facades\\PDF"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    }
+}
